@@ -13,6 +13,19 @@
             <button id="open-task-form-btn" class="btn large-btn">
                 Add New Task
             </button>
+            <!--Capa oculta del formulario que aparecera dinamicamente-->
+            <form name="task-form" method="POST" action="" class="hide">
+                <div><span id="close-form">x</span></div>
+                <label for="task-title" name="title-task">Title</label>
+                <input type="text" id="task-title"/>
+                <label for="task-date">Date</label>
+                <input type="date" name="date-task" id="task-date"/>
+                <label for="task-des">Description</label>
+                <textarea name="description-task" id="task-des" cols="30" rows="3" maxlength="100"></textarea>
+                <button id="task-form-btn" class="btn large-btn" aria-details="Add task">
+                    Add Task
+                </button>
+            </form>
         </div>
     </main>
 
