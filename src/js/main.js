@@ -11,3 +11,9 @@ const discardBtn = document.getElementById('discard-btn');
 const tasksContainer = document.getElementById('task-container');
 const taskData = [];
 const currentTask = {};
+
+//Manejando eventos
+//Mostrando el formulario de agregar tarea cuando se le da click al boton openTaskFormBtn
+openTaskFormBtn.addEventListener('click', function(){
+    taskForm.classList.toggle('hidden');//suicheo de la clase hidden.
+});
