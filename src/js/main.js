@@ -34,3 +34,8 @@ discardBtn.addEventListener('click', ()=>{
     confirmCloseDialog.close();
     taskForm.classList.toggle('hidden');
 });
+
+//Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
+taskForm.addEventListener('submit', (e)=>{
+    e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
+});
