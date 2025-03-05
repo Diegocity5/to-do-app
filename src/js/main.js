@@ -28,3 +28,9 @@ cancelBtn.addEventListener('click', ()=>{
     confirmCloseDialog.close();
     console.log('Se cerro el modal');
 });
+
+//Cerrando tanto el modal como el formulario de tarea si dan click en Discard boton.
+discardBtn.addEventListener('click', ()=>{
+    confirmCloseDialog.close();
+    taskForm.classList.toggle('hidden');
+});
