@@ -17,3 +17,8 @@ const currentTask = {};
 openTaskFormBtn.addEventListener('click', function(){
     taskForm.classList.toggle('hidden');//suicheo de la clase hidden.
 });
+
+//Mostrando el modal al dar click en el boton de cerrar formulario de tarea.
+closeTaskFormBtn.addEventListener('click', ()=>{
+    confirmCloseDialog.showModal();//metodo para mostrar modal
+})
