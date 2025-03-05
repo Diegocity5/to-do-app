@@ -22,3 +22,9 @@ openTaskFormBtn.addEventListener('click', function(){
 closeTaskFormBtn.addEventListener('click', ()=>{
     confirmCloseDialog.showModal();//metodo para mostrar modal
 })
+
+//Cerrando el modal al dar click en el boton cancel me permitira seguir editando la tarea en el fomulario.
+cancelBtn.addEventListener('click', ()=>{
+    confirmCloseDialog.close();
+    console.log('Se cerro el modal');
+});
