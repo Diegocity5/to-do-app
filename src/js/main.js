@@ -41,4 +41,8 @@ taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
     /*Encontrando si la tarea objeto existe o no existe con la validación de su propiedd id usando el metodo findIndex*/
     const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
+    //creando el objeto tarea
+    const taskObj = {
+    };
+    console.log(taskObj);
 });
