@@ -12,6 +12,7 @@ const tasksContainer = document.getElementById('task-container');
 const taskData = [];
 const currentTask = {};
 
+
 //Manejando eventos
 //Mostrando el formulario de agregar tarea cuando se le da click al boton openTaskFormBtn
 openTaskFormBtn.addEventListener('click', function(){
@@ -38,4 +39,6 @@ discardBtn.addEventListener('click', ()=>{
 //Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
+    /*Encontrando si la tarea objeto existe o no existe con la validación de su propiedd id usando el metodo findIndex*/
+    const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
 });
