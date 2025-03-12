@@ -45,6 +45,9 @@ taskForm.addEventListener('submit', (e)=>{
     const taskObj = {
         //Una cadena de guiones y milisegundos trascurridos para un id unico en cada objeto tarea
         id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value
     };
     console.log(taskObj);
 });
