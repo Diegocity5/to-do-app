@@ -43,7 +43,7 @@ taskForm.addEventListener('submit', (e)=>{
     const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
     //creando el objeto tarea
     const taskObj = {
-        id: titleInput.value.toLowerCase().split(' '),
+        id: titleInput.value.toLowerCase().split(' ').join('-'),//Una cadena de guiones
     };
     console.log(taskObj);
 });
