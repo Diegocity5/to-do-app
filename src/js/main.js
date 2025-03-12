@@ -49,4 +49,8 @@ taskForm.addEventListener('submit', (e)=>{
         date: dateInput.value,
         description: descriptionInput.value
     };
+    //Si no existe en el array el indice osea es una nueva tarea
+    if(dataArrIndex === -1){
+        taskData.unshift(taskObj);//se agrega al inicio del array.
+    }
 });
