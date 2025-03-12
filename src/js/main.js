@@ -56,5 +56,7 @@ taskForm.addEventListener('submit', (e)=>{
 
     //Mostrar la tarea en la pagina
     //Iterando el array y desestructurando las propiedades de cada objeto como argumento para poder usar las keys directamente.
-    taskData.forEach(({id, title, date, description})=>{});
+    taskData.forEach(({id, title, date, description})=>{
+        tasksContainer.innerHTML += ``;
+    });
 });
