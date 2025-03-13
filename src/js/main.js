@@ -33,7 +33,8 @@ cancelBtn.addEventListener('click', ()=>{
 //Cerrando tanto el modal como el formulario de tarea si dan click en Discard boton.
 discardBtn.addEventListener('click', ()=>{
     confirmCloseDialog.close();
-    taskForm.classList.toggle('hidden');
+    //Usando reset para limpiar y ocultar el formulario de tarea
+    reset();
 });
 
 //Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
