@@ -67,7 +67,8 @@ taskForm.addEventListener('submit', (e)=>{
             </div>
         `;
     });
-    
+    //Invocando la funcion reset.
+    reset();
 });
 
 //Funcion para limpiar los campos de entrada
