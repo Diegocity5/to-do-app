@@ -22,6 +22,8 @@ openTaskFormBtn.addEventListener('click', function(){
 //Mostrando el modal al dar click en el boton de cerrar formulario de tarea.
 closeTaskFormBtn.addEventListener('click', ()=>{
     confirmCloseDialog.showModal();//metodo para mostrar modal
+    //Si hay almenos un campo de entrada con texto guarda true si no false.
+    const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
 })
 
 //Cerrando el modal al dar click en el boton cancel me permitira seguir editando la tarea en el fomulario.
