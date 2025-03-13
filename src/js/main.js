@@ -47,7 +47,7 @@ discardBtn.addEventListener('click', ()=>{
 //Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
-    
+    addOrUpdateTask();//Agregar Tarea o actualizarla si ya existe
 });
 
 //Funcion para agregar tareas o actualizarlas
