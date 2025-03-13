@@ -47,20 +47,6 @@ discardBtn.addEventListener('click', ()=>{
 //Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
-    /*Encontrando si la tarea objeto existe o no existe con la validación de su propiedd id usando el metodo findIndex*/
-    const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
-    //creando el objeto tarea
-    const taskObj = {
-        //Una cadena de guiones y milisegundos trascurridos para un id unico en cada objeto tarea
-        id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
-        title: titleInput.value,
-        date: dateInput.value,
-        description: descriptionInput.value
-    };
-    //Si no existe en el array el indice osea es una nueva tarea
-    if(dataArrIndex === -1){
-        taskData.unshift(taskObj);//se agrega al inicio del array.
-    }
 
     //Mostrar la tarea en la pagina
     //Iterando el array y desestructurando las propiedades de cada objeto como argumento para poder usar las keys directamente.
@@ -88,4 +74,22 @@ const reset = ()=>{
     //Ocultar la capa formulario para ver la tarea renderizada.
     taskForm.classList.toggle('hidden');
     currentTask = {};
+}
+
+//Funcion para agregar tareas o actualizarlas
+const addOrUpdateTask = ()=>{
+     /*Encontrando si la tarea objeto existe o no existe con la validación de su propiedd id usando el metodo findIndex*/
+     const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
+    //creando el objeto tarea
+    const taskObj = {
+        //Una cadena de guiones y milisegundos trascurridos para un id unico en cada objeto tarea
+        id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value
+    };
+    //Si no existe en el array el indice osea es una nueva tarea
+    if(dataArrIndex === -1){
+        taskData.unshift(taskObj);//se agrega al inicio del array.
+    }
 }
