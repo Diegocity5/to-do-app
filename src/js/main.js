@@ -74,6 +74,8 @@ const addOrUpdateTask = ()=>{
 
 //Funcion para renderizar las tareas en el DOM.
 const updateTaskContainer = ()=>{
+    //Antes de agregar una tarea primero limpia la renderización anterior para prevenir la duplicación de tareas renderizadas en el taskContainer.
+    tasksContainer.innerHTML = '';
     //Iterando el array y desestructurando las propiedades de cada objeto como argumento para poder usar las keys directamente.
     taskData.forEach(({id, title, date, description})=>{
         tasksContainer.innerHTML += `
