@@ -67,12 +67,16 @@ taskForm.addEventListener('submit', (e)=>{
             </div>
         `;
     });
-
-    //Ocultar la capa formulario para ver la tarea renderizada.
-    taskForm.classList.toggle('hidden');
+    
 });
 
 //Funcion para limpiar los campos de entrada
 const reset = ()=>{
+    titleInput.value = '';
+    dateInput.value = '';
+    descriptionInput.value = '';
 
+    //Ocultar la capa formulario para ver la tarea renderizada.
+    taskForm.classList.toggle('hidden');
+    currentTask = {};
 }
