@@ -67,4 +67,7 @@ taskForm.addEventListener('submit', (e)=>{
             </div>
         `;
     });
+
+    //Ocultar la capa formulario para ver la tarea renderizada.
+    taskForm.classList.toggle('hidden');
 });
