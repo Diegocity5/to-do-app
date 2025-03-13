@@ -48,19 +48,7 @@ discardBtn.addEventListener('click', ()=>{
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
 
-    //Mostrar la tarea en la pagina
-    //Iterando el array y desestructurando las propiedades de cada objeto como argumento para poder usar las keys directamente.
-    taskData.forEach(({id, title, date, description})=>{
-        tasksContainer.innerHTML += `
-            <div class="task" id="${id}">
-                <p><strong>Title: </strong>${title}</p>
-                <p><strong>Date: </strong>${date}</p>
-                <p><strong>Description: </strong>${description}</p>
-                <button type="button" class="btn">Edit</button>
-                <button type="button" class="btn">Delete</button>
-            </div>
-        `;
-    });
+    
     //Invocando la funcion reset.
     reset();
 });
@@ -92,4 +80,20 @@ const addOrUpdateTask = ()=>{
     if(dataArrIndex === -1){
         taskData.unshift(taskObj);//se agrega al inicio del array.
     }
+}
+
+//Funcion para renderizar las tareas en el DOM.
+const updateTaskContainer = ()=>{
+    //Iterando el array y desestructurando las propiedades de cada objeto como argumento para poder usar las keys directamente.
+    taskData.forEach(({id, title, date, description})=>{
+        tasksContainer.innerHTML += `
+            <div class="task" id="${id}">
+                <p><strong>Title: </strong>${title}</p>
+                <p><strong>Date: </strong>${date}</p>
+                <p><strong>Description: </strong>${description}</p>
+                <button type="button" class="btn">Edit</button>
+                <button type="button" class="btn">Delete</button>
+            </div>
+        `;
+    });
 }
