@@ -47,22 +47,8 @@ discardBtn.addEventListener('click', ()=>{
 //Previniendo que por defecto se refresque la pagina despues de enviar la información pues el evento submit hace eso.
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();//Entonces uso  preventDefault() para que me mantenga el formulario.
-
     
-    //Invocando la funcion reset.
-    reset();
 });
-
-//Funcion para limpiar los campos de entrada
-const reset = ()=>{
-    titleInput.value = '';
-    dateInput.value = '';
-    descriptionInput.value = '';
-
-    //Ocultar la capa formulario para ver la tarea renderizada.
-    taskForm.classList.toggle('hidden');
-    currentTask = {};
-}
 
 //Funcion para agregar tareas o actualizarlas
 const addOrUpdateTask = ()=>{
@@ -80,6 +66,10 @@ const addOrUpdateTask = ()=>{
     if(dataArrIndex === -1){
         taskData.unshift(taskObj);//se agrega al inicio del array.
     }
+    //Incovando la funcion insertar o actualizar
+    updateTaskContainer();
+    //Invocando la funcion reset.
+    reset();
 }
 
 //Funcion para renderizar las tareas en el DOM.
@@ -96,4 +86,15 @@ const updateTaskContainer = ()=>{
             </div>
         `;
     });
+}
+
+//Funcion para limpiar los campos de entrada
+const reset = ()=>{
+    titleInput.value = '';
+    dateInput.value = '';
+    descriptionInput.value = '';
+
+    //Ocultar la capa formulario para ver la tarea renderizada.
+    taskForm.classList.toggle('hidden');
+    currentTask = {};
 }
