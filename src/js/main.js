@@ -126,4 +126,6 @@ const editTask = (buttonEl)=>{
 
     //Cambiando el texto del boton a actualizar tarea.
     addOrUpdateTaskBtn.innerText = "Update Task";
+    //Mostrando el formulario editar tarea.
+    taskForm.classList.toggle('hidden');
 }
