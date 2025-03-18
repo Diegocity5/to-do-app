@@ -113,4 +113,8 @@ const deleteTask = (buttonEl)=>{
 }
 
 //Funcion para editar la tarea
-const editTask = ()=>{}
+const editTask = (buttonEl)=>{
+    //Encontrar el indice de la tarea que quiero editar
+    const dataArrIndex = taskData.findIndex((item)=> item.id === buttonEl.parentElement.id);
+    
+}
