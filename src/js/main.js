@@ -100,3 +100,8 @@ const reset = ()=>{
     taskForm.classList.toggle('hidden');
     currentTask = {};
 }
+
+//Funcion para eliminar la tarea
+const deleteTask = (buttonEl)=>{
+    console.log(buttonEl);//This hace referencia al boton que es desecadena esta funcion.
+}
