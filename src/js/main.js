@@ -118,5 +118,9 @@ const editTask = (buttonEl)=>{
     const dataArrIndex = taskData.findIndex((item)=> item.id === buttonEl.parentElement.id);
     //Objeto currentTask se muta igual al objeto tarea recuperado
     currentTask = taskData[dataArrIndex];
+    //Los campos del formulario recuperan los valores del objeto currentTask para una previsualización de la información que se habia registrado anteriormente en dicha tarea.
+    titleInput.value = currentTask.title;
+    dateInput.value = currentTask.date;
+    descriptionInput.value = currentTask.description;
     
 }
