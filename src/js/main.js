@@ -65,6 +65,9 @@ const addOrUpdateTask = ()=>{
     //Si no existe en el array el indice osea es una nueva tarea
     if(dataArrIndex === -1){
         taskData.unshift(taskObj);//se agrega al inicio del array.
+    }else {
+        //Actualizando el objeto existente en el array por la nueva tarea.
+        taskData[dataArrIndex] = taskObj;
     }
     //Incovando la funcion insertar o actualizar
     updateTaskContainer();
