@@ -116,5 +116,7 @@ const deleteTask = (buttonEl)=>{
 const editTask = (buttonEl)=>{
     //Encontrar el indice de la tarea que quiero editar
     const dataArrIndex = taskData.findIndex((item)=> item.id === buttonEl.parentElement.id);
+    //Objeto currentTask se muta igual al objeto tarea recuperado
+    currentTask = taskData[dataArrIndex];
     
 }
