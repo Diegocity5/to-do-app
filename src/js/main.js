@@ -103,5 +103,6 @@ const reset = ()=>{
 
 //Funcion para eliminar la tarea
 const deleteTask = (buttonEl)=>{
-    console.log(buttonEl);//This hace referencia al boton que es desecadena esta funcion.
+    //Obtener el indice de la tarea que quiero eliminar en la estructura de datos (array).
+    const dataArrIndex = taskData.findIndex((item)=>item.id === buttonEl.parentElement.id);
 }
