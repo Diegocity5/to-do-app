@@ -111,3 +111,6 @@ const deleteTask = (buttonEl)=>{
     //splice es muy flexible no solo permite eliminar si no tambien agregar o reemplazar en cualquier posicion deseada tener en cuenta que es metodo es mutable.
     taskData.splice(dataArrIndex,1);
 }
+
+//Funcion para editar la tarea
+const editTask = ()=>{}
