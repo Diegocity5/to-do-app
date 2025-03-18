@@ -105,4 +105,9 @@ const reset = ()=>{
 const deleteTask = (buttonEl)=>{
     //Obtener el indice de la tarea que quiero eliminar en la estructura de datos (array).
     const dataArrIndex = taskData.findIndex((item)=>item.id === buttonEl.parentElement.id);
+    //Eliminando la tarea del DOM
+    buttonEl.parentElement.remove();
+    //Eliminando el elemento teniendo en cuenta su indice del array.
+    //splice es muy flexible no solo permite eliminar si no tambien agregar o reemplazar en cualquier posicion deseada tener en cuenta que es metodo es mutable.
+    taskData.splice(dataArrIndex,1);
 }
