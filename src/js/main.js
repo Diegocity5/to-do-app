@@ -10,7 +10,7 @@ const cancelBtn = document.getElementById('cancel-btn');
 const discardBtn = document.getElementById('discard-btn');
 const tasksContainer = document.getElementById('task-container');
 const taskData = [];
-const currentTask = {};
+let currentTask = {};
 
 
 //Manejando eventos
