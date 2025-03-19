@@ -23,6 +23,9 @@ openTaskFormBtn.addEventListener('click', function(){
 closeTaskFormBtn.addEventListener('click', ()=>{
     //Si hay almenos un campo de entrada con texto guarda true si no false.
     const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
+    //Identificando si el usuario actualizo la información de la tarea actual por los valores para crear una nueva version tarea.
+    const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInput.value !== currentTask.date || descriptionInput.value !== currentTask.description;
+
     //validando la variable para tomar una decision
     if(formInputsContainValues){
         confirmCloseDialog.showModal();//metodo para mostrar modal
