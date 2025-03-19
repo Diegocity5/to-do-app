@@ -26,8 +26,8 @@ closeTaskFormBtn.addEventListener('click', ()=>{
     //Identificando si el usuario actualizo la información de la tarea actual por los valores para crear una nueva version tarea.
     const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInput.value !== currentTask.date || descriptionInput.value !== currentTask.description;
 
-    //validando la variable para tomar una decision
-    if(formInputsContainValues){
+    //validando las variables para tomar una decision solo se muestra el modal con los botones de cancelar y descartar si hay texto y son diferentes los valores del objeto a crear del currentTask.
+    if(formInputsContainValues && formInputValuesUpdated){
         confirmCloseDialog.showModal();//metodo para mostrar modal
     }else {
         reset();//Limpia los campos y cierra el formulario.
