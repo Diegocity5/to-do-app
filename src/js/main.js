@@ -135,3 +135,19 @@ const editTask = (buttonEl)=>{
     //Mostrando el formulario editar tarea.
     taskForm.classList.toggle('hidden');
 }
+
+//Array para guardarlo en el local storage
+const myTaskArr = [
+    {task: "Walk the Dog", date: "22-04-2022"},
+    {task: "Read some books", date: "02-11-2023"},
+    {task: "Watch Soccer", date: "10-08-2021"},
+];
+
+/*LOCAL STORAGE: Es una api de almacenamiento permanente que tienen los navegadores osea
+si se cierra la ventana o se apaga el computador cuando vuelva el usuario los
+datos se mantienen se usa para guardar datos (item) como clave valor usando su metodo setItem('key', value);
+tambien tiene metodos de recuperar getItem('key'), remover removeItem('key'), clear() limpia todos los datos
+del localStorage.
+*/
+//Guardando un value no adecuado porque el valor guardado en el localStorage debe ser texto plano y no javascript.
+localStorage.setItem('data', myTaskArr);//si visualizamos en la devtools mostrara [object Object] esta mal guardado.
