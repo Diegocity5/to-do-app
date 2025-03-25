@@ -135,26 +135,3 @@ const editTask = (buttonEl)=>{
     //Mostrando el formulario editar tarea.
     taskForm.classList.toggle('hidden');
 }
-
-//Array para guardarlo en el local storage
-const myTaskArr = [
-    {task: "Walk the Dog", date: "22-04-2022"},
-    {task: "Read some books", date: "02-11-2023"},
-    {task: "Watch Soccer", date: "10-08-2021"},
-];
-
-//Guardando en el valor de forma adecuada en el localStorage usando stringify metodo para convertir a texto plano.
-localStorage.setItem('data', JSON.stringify(myTaskArr));
-
-//Eliminando el dato del localStorage
-// localStorage.removeItem('data');
-//Eliminando todos los datos almacenados en el localStorage
-localStorage.clear();
-
-//Recuperando el valor de mi key data guardado en el localStorage osea el array.
-const getTaskArr = localStorage.getItem('data');
-console.log(getTaskArr);
-
-//Recuperando el valor de mi key data guardado en el localStorage pero esta vez lo parseo a codigo js porque anteriormente se recuperaba en texto json tal y como se guardaba.
-const getTaskArrObj = JSON.parse(localStorage.getItem('data'));
-console.log(getTaskArrObj);
