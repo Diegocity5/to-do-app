@@ -147,7 +147,9 @@ const myTaskArr = [
 localStorage.setItem('data', JSON.stringify(myTaskArr));
 
 //Eliminando el dato del localStorage
-localStorage.removeItem('data');
+// localStorage.removeItem('data');
+//Eliminando todos los datos almacenados en el localStorage
+localStorage.clear();
 
 //Recuperando el valor de mi key data guardado en el localStorage osea el array.
 const getTaskArr = localStorage.getItem('data');
