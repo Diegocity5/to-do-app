@@ -146,6 +146,9 @@ const myTaskArr = [
 //Guardando en el valor de forma adecuada en el localStorage usando stringify metodo para convertir a texto plano.
 localStorage.setItem('data', JSON.stringify(myTaskArr));
 
+//Eliminando el dato del localStorage
+localStorage.removeItem('data');
+
 //Recuperando el valor de mi key data guardado en el localStorage osea el array.
 const getTaskArr = localStorage.getItem('data');
 console.log(getTaskArr);
