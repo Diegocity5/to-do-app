@@ -150,3 +150,6 @@ localStorage.setItem('data', JSON.stringify(myTaskArr));
 const getTaskArr = localStorage.getItem('data');
 console.log(getTaskArr);
 
+//Recuperando el valor de mi key data guardado en el localStorage pero esta vez lo parseo a codigo js porque anteriormente se recuperaba en texto json tal y como se guardaba.
+const getTaskArrObj = JSON.parse(localStorage.getItem('data'));
+console.log(getTaskArrObj);
