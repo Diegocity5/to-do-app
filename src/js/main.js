@@ -110,6 +110,9 @@ const reset = ()=>{
     //Ocultar la capa formulario para ver la tarea renderizada.
     taskForm.classList.toggle('hidden');
     currentTask = {};
+
+    //Actualizar el texto del boton como estaba anteriormente
+    addOrUpdateTaskBtn.innerText = "Add Task";
 }
 
 //Funcion para eliminar la tarea
@@ -141,4 +144,9 @@ const editTask = (buttonEl)=>{
     addOrUpdateTaskBtn.innerText = "Update Task";
     //Mostrando el formulario editar tarea.
     taskForm.classList.toggle('hidden');
+}
+
+//si hay tareas en el array la primera vez que se cargue la pagina osea la copia recuperada del localStorage.
+if(taskData.length){
+    updateTaskContainer();//Renderizo tareas.
 }
