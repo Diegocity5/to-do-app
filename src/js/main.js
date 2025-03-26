@@ -72,6 +72,10 @@ const addOrUpdateTask = ()=>{
         //Actualizando el objeto existente en el array por la nueva tarea.
         taskData[dataArrIndex] = taskObj;
     }
+
+    //Guardando en localStorage lo que tenga el array cada vez que sea un dato agregado o actualizado.
+    localStorage.setItem('data', JSON.stringify(taskData));
+
     //Incovando la funcion insertar o actualizar
     updateTaskContainer();
     //Invocando la funcion reset.
