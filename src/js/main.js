@@ -120,6 +120,8 @@ const deleteTask = (buttonEl)=>{
     //Eliminando el elemento teniendo en cuenta su indice del array.
     //splice es muy flexible no solo permite eliminar si no tambien agregar o reemplazar en cualquier posicion deseada tener en cuenta que es metodo es mutable.
     taskData.splice(dataArrIndex,1);
+    //Actualizando el valor del localStorage al eliminar una tarea
+    localStorage.setItem('data', JSON.stringify(taskData));
 }
 
 //Funcion para editar la tarea
