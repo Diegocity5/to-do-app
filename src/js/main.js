@@ -9,7 +9,8 @@ const confirmCloseDialog = document.getElementById('confirm-close-dialog');
 const cancelBtn = document.getElementById('cancel-btn');
 const discardBtn = document.getElementById('discard-btn');
 const tasksContainer = document.getElementById('task-container');
-const taskData = [];
+//Si no hay datos almacenados, asigna un array vacío [].
+const taskData = JSON.parse(localStorage.getItem('data')) || [];//|| regresa el valor truthy encontrado
 let currentTask = {};
 
 
