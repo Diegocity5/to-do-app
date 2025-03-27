@@ -67,10 +67,10 @@ const addOrUpdateTask = ()=>{
     //creando el objeto tarea
     const taskObj = {
         //Una cadena de guiones y milisegundos trascurridos para un id unico en cada objeto tarea
-        id: `${titleInput.value.toLowerCase().split(' ').join('-')}-${Date.now()}`,
-        title: titleInput.value,
+        id: `${removeSpecialShars(titleInput.value).toLowerCase().split(' ').join('-')}-${Date.now()}`,
+        title: removeSpecialShars(titleInput.value),
         date: dateInput.value,
-        description: descriptionInput.value
+        description: removeSpecialShars(descriptionInput.value)
     };
     //Si no existe en el array el indice osea es una nueva tarea
     if(dataArrIndex === -1){
