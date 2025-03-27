@@ -159,5 +159,5 @@ if(taskData.length){
 
 //Esta funcion limpiara caracteres especiales de los valores de entrada de los campos.
 const removeSpecialShars = (val)=>{
-    return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '');
+    return val.trim().replace(/[^A-Za-zñ0-9\-\s]/g, '');
 }
