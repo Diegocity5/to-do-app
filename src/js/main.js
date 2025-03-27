@@ -56,6 +56,12 @@ taskForm.addEventListener('submit', (e)=>{
 
 //Funcion para agregar tareas o actualizarlas
 const addOrUpdateTask = ()=>{
+    //Validando para prevenir un valor con espacios vacios.
+    if(!titleInput.value.trim()){
+        alert('Please provide a title');
+        return;
+    }
+
      /*Encontrando si la tarea objeto existe o no existe con la validación de su propiedd id usando el metodo findIndex*/
      const dataArrIndex = taskData.findIndex((item)=> item.id === currentTask.id);
     //creando el objeto tarea
